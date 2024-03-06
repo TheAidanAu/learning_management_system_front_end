@@ -21,8 +21,21 @@ export default function LeanerAssignmentView() {
     setNewAssignment("")
   }
 
+  // This function toggles the completion status of an assignment  
+  function toggleAssignment(id, completed) {
+    // This updates the assignmentList by mapping over 
+    // the current assignmentList and toggling the completion status 
+    // of the assignment for a particular id 
+    setAssignmentList(currentAssignments => {
+      return currentAssignments.map(assignment => {
+        if (assignment.id === id) {
+          return { ...assignment, completed}
+        }
 
-
+        return assignment
+      })
+    })
+  }
 
   return (
     <>
@@ -55,8 +68,6 @@ export default function LeanerAssignmentView() {
         </li>
         )
         })}
-
-
       </ul>
       </>
     )

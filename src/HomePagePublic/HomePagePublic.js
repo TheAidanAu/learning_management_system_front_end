@@ -14,10 +14,7 @@ function HomePagePublic() {
             <p>Welcome To The Assignment Review App</p> 
             <button className ="btn" onClick={goToPageLogin}>Login</button>
         </div>
-    );
-
-
-    
+    );    
 };
 
 export default HomePagePublic;
